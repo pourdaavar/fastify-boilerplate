@@ -22,4 +22,4 @@ export const Card = ({
       <p>{children}</p>
     </a>
   );
-}
+};

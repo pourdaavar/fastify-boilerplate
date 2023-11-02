@@ -6,9 +6,8 @@
   "scripts": {
     "build": "shx rm -rf dist && tsc",
     "start": "node dist/main",
-    "lint": "lint --fix",
-    "dev": "development=true nodemon | pino-pretty -c -i pid,hostname -S -t 'sys:standard'",
-    "prepare": "husky install"
+    "lint": "eslint --fix",
+    "dev": "development=true nodemon | pino-pretty -c -i pid,hostname -S -t 'sys:standard'"
   },
   "devDependencies": {
     "@swc/cli": "0.1.62",
