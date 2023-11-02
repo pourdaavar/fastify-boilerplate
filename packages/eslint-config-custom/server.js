@@ -2,6 +2,7 @@ const { init } = require('@fullstacksjs/eslint-config/init');
 const { resolve } = require('node:path');
 
 const project = resolve(process.cwd(), 'tsconfig.json');
+const projectEslint = resolve(process.cwd(), 'tsconfig.eslint.json');
 
 module.exports = init({
   root: true,
@@ -9,11 +10,10 @@ module.exports = init({
     auto: true,
     esm: true,
     cspell: false,
-    react: true,
     typescript: {
-      parserProject: project,
+      parserProject: projectEslint,
       resolverProject: project,
     },
+    disableExpensiveRules: !process.env.CI || !process.env.HUSKY,
   },
-  extends: ['plugin:@tanstack/eslint-plugin-query/recommended'],
 });

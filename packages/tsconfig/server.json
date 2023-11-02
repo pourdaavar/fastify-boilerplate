@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Server",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["esnext"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": "src",
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "ts-node": {
+    "swc": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
